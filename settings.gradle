@@ -1,9 +1,9 @@
 rootProject.name = 'party-note'
+
 include 'stats'
 include 'stats:common-dto'
-findProject(':stats:common-dto')?.name = 'common-dto'
 include 'stats:client'
-findProject(':stats:client')?.name = 'client'
 include 'stats:stat-service'
-findProject(':stats:stat-service')?.name = 'stat-service'
+
+include 'main-module'
 

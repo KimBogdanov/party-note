@@ -2,6 +2,12 @@ plugins {
     id 'java'
 }
 
+ext {
+    mapstructVersion = "1.4.2.Final"
+    lombokVersion = "1.18.30"
+    lombokMapstructBindingVersion = "0.2.0"
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
@@ -18,9 +24,8 @@ dependencies {
 }
 
 dependencies {
-    implementation 'org.projectlombok:lombok:1.18.22'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
+    implementation "org.mapstruct:mapstruct:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}", "org.projectlombok:lombok:${lombokVersion}", "org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}"
 }
 
 test {

@@ -1,4 +1,4 @@
-package ru.kim.partynote;
+package ru.kim;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
